@@ -16,21 +16,12 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
-/**
- *
- * Class Select2EntityType
- * @package Tetranz\Select2EntityBundle\Form\Type
- */
 class Select2EntityType extends AbstractType
 {
-    /** @var ManagerRegistry */
-    protected $registry;
-    /** @var ObjectManager */
-    protected $em;
-    /** @var RouterInterface */
-    protected $router;
-    /** @var array */
-    protected $config;
+    protected ManagerRegistry $registry;
+    protected ObjectManager $em;
+    protected RouterInterface $router;
+    protected array $config;
 
     /**
      * @param ManagerRegistry   $registry
@@ -163,7 +154,7 @@ class Select2EntityType extends AbstractType
                 'text_property' => null,
                 'placeholder' => false,
                 'language' => $this->config['language'],
-		'theme' => $this->config['theme'],
+		        'theme' => $this->config['theme'],
                 'required' => false,
                 'cache' => $this->config['cache'],
                 'cache_timeout' => $this->config['cache_timeout'],
@@ -183,7 +174,7 @@ class Select2EntityType extends AbstractType
     /**
      * @return string
      */
-    public function getBlockPrefix()
+    public function getBlockPrefix(): string
     {
         return 'tetranz_select2entity';
     }
