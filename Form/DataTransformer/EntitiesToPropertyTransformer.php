@@ -15,7 +15,7 @@ class EntitiesToPropertyTransformer implements DataTransformerInterface
 {
     protected ObjectManager $em;
     protected string $className;
-    protected string $textProperty;
+    protected ?string $textProperty = null;
     protected string $primaryKey;
     protected string $newTagPrefix;
     protected string $newTagText;
