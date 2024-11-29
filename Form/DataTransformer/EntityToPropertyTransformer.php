@@ -35,7 +35,7 @@ class EntityToPropertyTransformer implements DataTransformerInterface
     /**
      * Transform entity to array
      */
-    public function transform(mixed $value): mixed
+    public function transform(mixed $entity): mixed
     {
         $data = array();
         if (empty($entity)) {
